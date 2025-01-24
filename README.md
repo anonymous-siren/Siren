@@ -102,3 +102,8 @@ or
 CUDA_VISIBLE_DEVICES=0 python main_sft_dpo.py --attacker_model qwen --adaptor decop_2 --victim_model claude-3-5-haiku-20241022 > sft_dpo_qwen_2_claude.log 2>&1 &
 CUDA_VISIBLE_DEVICES=4 python main_sft_dpo.py --attacker_model llama3 --adaptor decop_1 --victim_model gpt-4o-2024-08-06 > sft_dpo_llama3_1_gpt.log 2>&1 &
 CUDA_VISIBLE_DEVICES=1 python main_sft_dpo.py --attacker_model mistral --adaptor decop_2 --victim_model gemini-1.5-pro-latest > sft_dpo_mistral_2_ge.log 2>&1 &
+```
+After you get the interaction records, you can cal ASR with:
+```bash
+python cal_asr.py
+```
